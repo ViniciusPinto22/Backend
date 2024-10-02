@@ -1,13 +1,40 @@
 <?php
+$nome = 'Vinicião';
 
-echo "<h1>Olá ".$POST['email'].", seja bem vindo !!! <hr>";
+echo $nome;
+echo '<h1> Olá meu SENAI';
 
-echo '<pre>';
-print_r ($_POST);
-echo '</pre>';
-echo '<hr>';
+$usuario_autenticado = false;
 
-echo 'E-mail: ';
-echo $_POST['email'];
-echo '<br>';
-echo $_POST['senha'];
+//definindo a senha e os emails corretos
+
+$usuario_cadastrado = [
+    ['email' => 'admin@senai.br',
+    'senha' => 12345
+    ],
+    ['email'=> 'aluno@senai.br',
+    'senha'=> 54321
+    ],
+    ['email'=> 'instrutor@senai.br',
+    'senha'=> 01234
+    ]
+];
+
+
+
+foreach ($usuario_cadastrado as $user){
+    if ($user['email'] == $_POST['email'] && $user['senha'] == $_POST['senha']){
+        $usuario_autenticado = true;
+
+    }
+}
+
+//fazendo a verficação dos emails
+
+if ($usuario_autenticado == true){
+    echo "Usuario autenticado com sucesso";
+}else{
+    //echo "Usuario ou senha incorreto";
+    header ('location: index.php?login=erro');
+}
+?>
