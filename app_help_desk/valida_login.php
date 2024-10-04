@@ -1,8 +1,5 @@
 <?php
-$nome = 'Vinicião';
-
-echo $nome;
-echo '<h1> Olá meu SENAI';
+session_start();
 
 $usuario_autenticado = false;
 
@@ -32,8 +29,11 @@ foreach ($usuario_cadastrado as $user){
 //fazendo a verficação dos emails
 
 if ($usuario_autenticado == true){
-    echo "Usuario autenticado com sucesso";
+    $_SESSION['autenticado'] = 'SIM';
+    echo "<h1>Usuario autenticado com sucesso";
+    header ('location: painel.php?login=autorizado');
 }else{
+    $_SESSION['autenticado'] = 'NÃO';
     //echo "Usuario ou senha incorreto";
     header ('location: index.php?login=erro');
 }

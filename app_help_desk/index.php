@@ -33,6 +33,26 @@
                 <div class="form-group">
                   <input type="password" name="senha" class="form-control" placeholder="Senha" required>
                 </div>
+
+                <?
+                if(isset($_GET['login']) && $_GET ['login'] == 'erro'){
+                ?>
+                <div class="tex-danger">
+                  Usuario ou senha invalido(s)
+                </div>
+                <? } ?>
+
+                <?
+                if(isset($_GET['login']) && $_GET ['login'] == 'erro2'){
+                ?>
+                <div class="tex-danger">
+                  Faça o login primeiro !!!
+                </div>
+                <? } ?>
+
+
+
+
                 <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
               </form>
             </div>
