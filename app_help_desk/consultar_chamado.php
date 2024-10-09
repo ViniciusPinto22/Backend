@@ -1,10 +1,6 @@
-<?
-session_start();
+<?php
 
-//echo $_SESSION['autenticado'];
-if(!isset($_SESSION['autenticado']) || $_SESSION['autenticado']!= 'SIM'){
-  header ('location: index.php?login=erro2');
-}
+require_once("login.php");
 
 ?>
 
@@ -25,6 +21,7 @@ if(!isset($_SESSION['autenticado']) || $_SESSION['autenticado']!= 'SIM'){
         <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         App Help Desk
       </a>
+      <div class="botao"><button>Sair</button></div>
     </nav>
 
     <div class="container">    

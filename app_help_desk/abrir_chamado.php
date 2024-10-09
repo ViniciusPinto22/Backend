@@ -1,3 +1,9 @@
+<?php
+
+require_once("login.php");
+
+?>
+
 <html>
   <head>
     <meta charset="utf-8" />
@@ -15,6 +21,7 @@
         <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         App Help Desk
       </a>
+      <div class="botao"><button>Sair</button></div>
     </nav>
 
     <div class="container">    
@@ -52,7 +59,7 @@
                     </div>
 
                     <div class="row mt-5">
-                      <div class="col-6">
+                      <div class="col-6">ze
                         <button class="btn btn-lg btn-warning btn-block" type="submit">Voltar</button>
                       </div>
 
