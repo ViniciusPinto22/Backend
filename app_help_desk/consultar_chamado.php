@@ -16,12 +16,12 @@ require_once("login.php");
 
   <body>
 
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar">
       <a class="navbar-brand" href="#">
-        <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        App Help Desk
+        <img src="logo.png" width="500" height="50" class="d-inline-block align-top" alt="">
+        
       </a>
-      <div class="botao"><button>Sair</button></div>
+      <div><button onclick="location.href='logoff.php'" class="botao" type="button">Sair</button></div>
     </nav>
 
     <div class="container">    
@@ -36,7 +36,7 @@ require_once("login.php");
             <div class="card-body">
               
               <div class="card mb-3 bg-light">
-                <div class="card-body">
+                <div class="card-body2">
                   <h5 class="card-title">Título do chamado...</h5>
                   <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
                   <p class="card-text">Descrição do chamado...</p>
@@ -45,7 +45,7 @@ require_once("login.php");
               </div>
 
               <div class="card mb-3 bg-light">
-                <div class="card-body">
+                <div class="card-body2">
                   <h5 class="card-title">Título do chamado...</h5>
                   <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
                   <p class="card-text">Descrição do chamado...</p>
@@ -53,9 +53,9 @@ require_once("login.php");
                 </div>
               </div>
 
-              <div class="row mt-5">
+              <div class="row">
                 <div class="col-6">
-                  <button class="btn btn-lg btn-warning btn-block" type="submit">Voltar</button>
+                  <button onclick="location.href='painel.php'" class="btn btn-lg btn-info btn-block" type="button">Voltar</button>
                 </div>
               </div>
             </div>

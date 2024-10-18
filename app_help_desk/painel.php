@@ -12,18 +12,20 @@ require_once("login.php");
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
     
+    
     </style>
   </head>
 
   <body>
-
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
-        <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        App Help Desk
-      </a>
-      <div><button onclick="location.href='logoff.php'" class="botao" type="button">Sair</button></div>
-    </nav>
+    <div>
+      <nav class="navbar">
+        <a class="navbar-brand" href="#">
+          <img src="logo.png" width="500" height="50" class="d-inline-block align-top" alt="">
+        </a>
+        <div><button onclick="location.href='logoff.php'" class="botao" type="button">Sair</button></div>  
+      </nav>
+    </div>
+    
 
     <div class="container">    
       <div class="row">
@@ -37,11 +39,15 @@ require_once("login.php");
               <div class="row">
                 <div class="col-6 d-flex justify-content-center">
                   <a href="abrir_chamado.php">
-                  <img src="formulario_abrir_chamado.png" width="70" height="70">
+                  <img src="caiox.png" width="200" >
+                  <h4><strong class="abrir"><center>Abrir Chamado</center></strong></h4>
                   </a>
                 </div>
                 <div class="col-6 d-flex justify-content-center">
-                  <img src="formulario_consultar_chamado.png" width="70" height="70">
+                  <a href="consultar_chamado.php">
+                  <img src="castrin.png" width="200" >
+                  <h4><strong class="consultar"><center>Consultar Chamado</center></strong></h4>
+                  </a>
                 </div>
               </div>
             </div>

@@ -1,21 +1,23 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>App Help Desk</title>
+    <title>LOUD</title>
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    
+
 
     </style>
   </head>
 
   <body>
-
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
-        <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        App Help Desk
-      </a>
-    </nav>
+    <div class="header">
+      <nav class="navbar">
+        <a class="navbar-brand" href="#">
+          <img src="logo.png" width="500" height="50" class="d-inline-block align-top" alt="">
+        </a>
+      </nav>
+    </div>
 
     <div class="container">    
       <div class="row">
@@ -24,7 +26,7 @@
           <div class="card">
             <div class="card-header">
               Login
-            </div>
+            </div class="form">
             <div class="card-body">
               <form action="valida_login.php" method="post">
                 <div class="form-group">
@@ -35,17 +37,19 @@
                 </div>
 
                 <?
-                if(isset($_GET['login']) && $_GET ['login'] == 'erro'){
+                if(isset($_POST['login']) && $_POST['login'] == 'erro'){
                 ?>
-                <div class="tex-danger">
+                
+                  <div class="tex-danger">
                   Usuario ou senha invalido(s)
                 </div>
                 <? } ?>
 
                 <?
-                if(isset($_GET['login']) && $_GET ['login'] == 'erro2'){
+                if(isset($_POST['login']) && $_POST['login'] == 'erro2'){
                 ?>
-                <div class="tex-danger">
+                
+                  <div class="tex-danger">
                   Faça o login primeiro !!!
                 </div>
                 <? } ?>
